@@ -24,6 +24,7 @@ app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/views/survey.html');
+    inject();
 });
 
 var serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT_KEY);
@@ -143,9 +144,12 @@ app.post('/submit', async (req, res) => {
     } catch (err) {
         console.error(err);
     }
+    inject();
     res.redirect('/');
 });
 
 app.listen(PORT, () =>
     console.log(current.getHours() + ":" + current.getMinutes() + " - " + `Server is running on http://localhost:${PORT}`)
 );
+
+import { inject } from "@vercel/analytics"
