@@ -12,6 +12,14 @@
     <!--Linked Resources-->
     <link rel="stylesheet" href="./css/results.css">
     <script src="./js/charts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        $(document).ready(function (){
+            $('.scrolltop').click(function (){
+                $(window).scrollTop(0);
+            });
+        })
+    </script>
     <title>Survey Results</title>
 </head>
 <body>
@@ -77,54 +85,16 @@
         </div>
     </div>
     <section class="footer">
-        <div class="signature">
+        <div class="btn btn-primary scrolltop" id="scrolltop">
+            <i class="fa fa-arrow-up px-2 py-2" aria-hidden="true"></i>
+        </div>
+        <!-- <div class="signature">
             <p>Website designed by Tevin, Christian and Oscar</p>
         </div>
         <div class="github-redirect">
             <p><a href="https://github.com/SEG3125-A/SEG3125-Group43">Check out the repository on GitHub !</a></p>
-        </div>
+        </div> -->
     </section>
-    <style>
-        .title {
-            font-family: 'pp_telegrafultrabold', sans-serif;
-            font-size: var(--title-size);
-            color: black;
-            position: absolute;
-            padding: 25px;
-            margin: 0;
-            padding-bottom: 5px;
-            top: 0px;
-            left: 50%;
-            transform: translateX(5%);
-            border-bottom: 1px solid black;
-            width: 90vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(10px);
-        }
-
-        .website-redirect-button {
-            right: 100px;
-            position: fixed;
-            width: 300px;
-            top: 30px;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-        }
-
-        .website-redirect-button-text {
-            margin: 5px;
-            font-family: var(--text-font);
-            color: black;
-        }
-
-        .website-redirect-button-text:hover {
-            cursor: pointer;
-            color: var(--adveris-green);
-        }
-    </style>
 </body>
 <script>
 
